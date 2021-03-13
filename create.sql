@@ -59,11 +59,13 @@ CREATE TABLE ANIMALS
 
 -- feeding table
 CREATE TABLE feeding (
-	FoodType_ID INT,
-	FoodType VARCHAR(50),
-    Animal VARCHAR(100),
+	FoodType_ID INT NOT NULL,
+	FoodType VARCHAR(50) NOT NULL,
+    	animal_id NOT INT,
+	animal VARCHAR(50)
 	Amount_eats FLOAT(2),
 	CONSTRAINT feeding_PK PRIMARY KEY (FoodType_ID)
+	CONSTRAINT animal_id_fk FOREIGN KEY(animal_id) REFERENCES ANIMALS
     );
 
 -- stock table
