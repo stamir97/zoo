@@ -7,9 +7,9 @@ use zoo; -- use this database to create tables
 --enclosure table
 create table enclosure(
 
-enclosure_id varchar(10) not null,
+enclosure_id int not null,
 enclosure_name varchar(20),
-allocated_zookeeper varchar(20),
+allocated_zookeeper int,
 habitat varchar(20),
 species varchar(20),
 opening_hours varchar(10),
